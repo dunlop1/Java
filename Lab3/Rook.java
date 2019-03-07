@@ -1,16 +1,20 @@
-/**
- * Created by eugene on 2019-03-05.
- */
-public abstract class Rook extends ChessPiece {
-    public int importance=5;
+public class Rook extends ChessPiece {
 
-    public int getImportance() {
-        return importance;
+    private static int importance = 5;
+
+    public Rook() {
+        super(importance);
+    }
+
+    @Override
+    public String toString() {
+        return "Rook {value = " + getValue() + "}";
     }
 
     @Override
     public void move() {
-        System.out.println("I move horizontally or vertically");
-
+        System.out.println("Rook moves horizontally or vertically");
     }
+
+
 }

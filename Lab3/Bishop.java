@@ -1,17 +1,19 @@
-/**
- * Created by eugene on 2019-03-05.
- */
-public abstract class Bishop extends ChessPiece {
-    public int importance=3;
+public class Bishop extends ChessPiece {
 
+    private static int importance = 3;
 
-    public int getImportance() {
-        return importance;
+    public Bishop() {
+        super(importance);
+    }
+
+    @Override
+    public String toString() {
+        return "Bishop {value = " + getValue() + " }";
     }
 
     @Override
     public void move() {
-        System.out.println("I move diagonally");
-
+        System.out.println("Bishop moves diagonally");
     }
+
 }

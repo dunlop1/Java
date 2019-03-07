@@ -1,17 +1,19 @@
-/**
- * Created by eugene on 2019-03-05.
- */
-public abstract class Knight extends ChessPiece {
-    public int importance=2;
+public class Knight extends ChessPiece {
 
+    private static int importance = 2;
 
-    public int getImportance() {
-        return importance;
+    public Knight() {
+        super(importance);
+    }
+
+    @Override
+    public String toString() {
+        return "Knight {value = " + getValue() + "}";
     }
 
     @Override
     public void move() {
-        System.out.println("like an L");
-
+        System.out.println("Knight moves like an L");
     }
+
 }

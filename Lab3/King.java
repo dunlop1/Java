@@ -1,17 +1,19 @@
-/**
- * Created by eugene on 2019-03-05.
- */
-public abstract class King extends ChessPiece {
-    public int importance=1000;
+public class King extends ChessPiece {
 
-    public int getImportance() {
-        return importance;
+    private static int importance = 1000;
+
+    public King() {
+        super(importance);
+    }
+
+    @Override
+    public String toString() {
+        return "King {value = " + getValue() + "}";
     }
 
     @Override
     public void move() {
-        System.out.println("I move one square");
-
+        System.out.println("King moves one square");
     }
 
 }
