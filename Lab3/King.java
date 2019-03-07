@@ -13,7 +13,7 @@ public class King extends ChessPiece {
 
     @Override
     public void move() {
-        System.out.println("King moves one square");
+        System.out.println("I move by one square");
     }
 
 }

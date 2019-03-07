@@ -13,7 +13,7 @@ public class Queen extends ChessPiece {
 
     @Override
     public void move() {
-        System.out.println("Queen moves like a bishop or a rook");
+        System.out.println("I move like a bishop or a rook");
     }
 
 

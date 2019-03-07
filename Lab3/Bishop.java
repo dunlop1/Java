@@ -13,7 +13,7 @@ public class Bishop extends ChessPiece {
 
     @Override
     public void move() {
-        System.out.println("Bishop moves diagonally");
+        System.out.println("I move by diagonally");
     }
 
 }

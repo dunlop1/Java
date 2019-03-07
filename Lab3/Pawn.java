@@ -20,7 +20,7 @@ public class Pawn extends ChessPiece {
 
     @Override
     public void move() {
-        System.out.println("Pawn moves forward 1");
+        System.out.println("I move forward by 1");
     }
 
 

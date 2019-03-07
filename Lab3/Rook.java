@@ -13,7 +13,7 @@ public class Rook extends ChessPiece {
 
     @Override
     public void move() {
-        System.out.println("Rook moves horizontally or vertically");
+        System.out.println("I move by horizontally or vertically");
     }
 
 
