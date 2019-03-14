@@ -1,76 +1,50 @@
-/**
- * Created by eugene on 2019-03-12.
- */
-public class Contact {
-    private String firstName;
-    private String lastName;
-    private String phone;
-    private String address;
-    private String email;
+public abstract class Contact {
 
+    String fullName;
+    String address;
+    String phoneNumber;
+    String emailAddress;
 
-    public Contact(String firstName, String lastName, String address, String email, String phone){
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Contact(String fullName, String address, String phoneNumber, String emailAddress)
+    {
+        this.fullName = fullName;
         this.address = address;
-        this.email = email;
-        this.phone = phone;
+        this.phoneNumber = phoneNumber;
+        this.emailAddress = emailAddress;
+    }
+    public void setFullName(String input){
+        this.fullName = input;
+    }
+    public String getFullName(){
+        return fullName;
     }
 
-    public String getfirstName() {
-        return this.firstName;
+    public void setAddress(String input){
+        this.address = input;
+    }
+    public String getAddress(){
+        return address;
     }
 
-    public String setfirstName(){
-        return (this.firstName = firstName);
+    public void setPhoneNumber(String input){
+        this.phoneNumber = input;
+    }
+    public String getPhoneNumber(){
+        return phoneNumber;
     }
 
-    public String getlastName() {
-        return this.lastName;
+    public void setEmailAddress(String input){
+        this.emailAddress = input;
+    }
+    public String getEmailAddress(){
+        return emailAddress;
     }
 
-    public String setlastName(){
-        return (this.lastName = lastName);
-    }
-
-    public String getAddress() {
-        return this.address;
-    }
-
-    public String setAddress(){
-        return (this.address = address);
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public String setEmail(){
-        return (this.email = email);
-    }
-
-    public String getPhone() {
-        return this.phone;
-    }
-
-    public String setPhone(){
-        return (this.phone = phone);
-    }
-
-    String getFirstName() {
-        return firstName;
-    }
-
-    String getLastName() {
-        return lastName;
-    }
-
-    public void viewContacts() {
-        System.out.println(this.getfirstName());
-        System.out.println(this.getlastName());
-        System.out.println(this.getAddress());
-        System.out.println(this.getEmail());
-        System.out.println(this.getPhone());
+    void viewContacts(){
+        System.out.println("First Name:" + fullName);
+        System.out.println("Address:" + address);
+        System.out.println("Phone Number:" + phoneNumber);
+        System.out.println("Email Address:" + emailAddress);
     }
 
 }
