@@ -1,26 +1,26 @@
-/**
- * Created by eugene on 2019-03-12.
- */
 public class Contact {
-    int contactId;
+    Integer id;
     String fullName;
     String address;
-    String phoneNumber;
-    String emailAddress;
-    public Contact(int contactId,String fullName, String address, String phoneNumber, String emailAddress)
+    Integer phoneNumber;
+    public Contact(Integer id, String fullName, Integer phoneNumber, String address)
     {
-        this.contactId = contactId;
+        this.id = id;
         this.fullName = fullName;
-        this.address = address;
         this.phoneNumber = phoneNumber;
-        this.emailAddress = emailAddress;
+        this.address = address;
+
     }
-    public void setContactId(){
-        this.contactId = contactId;
+
+
+
+    public void setId(Integer input) {
+        this.id = input;
     }
-    public int getContactId(){
-        return contactId;
+    public Integer getId() {
+        return id;
     }
+
     public void setFullName(String input){
         this.fullName = input;
     }
@@ -33,25 +33,21 @@ public class Contact {
     public String getAddress(){
         return address;
     }
-    public void setPhoneNumber(String input){
+    public void setPhoneNumber(Integer input){
         this.phoneNumber = input;
+
     }
-    public String getPhoneNumber(){
+    public Integer getPhoneNumber(){
         return phoneNumber;
     }
-    public void setEmailAddress(String input){
-        this.emailAddress = input;
-    }
-    public String getEmailAddress(){
-        return emailAddress;
-    }
+
     public void displayContact(){
-        System.out.println("Contact Id: " + contactId + " First Name: " + fullName);
+        System.out.println(" Full Name: " + fullName);
     }
 
     @Override
     public String toString() {
-        return "Contact Id: " + contactId + ", Full Name: " + fullName + ". Address: " + address + ", Phone Number: " + phoneNumber + "Email Address: " + emailAddress;
+        return "ID "+ id + " Full Name: " + fullName + ", Phone Number: " + phoneNumber + ". Address: " + address;
     }
 
 }

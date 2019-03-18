@@ -19,24 +19,42 @@ public class Main {
         Scanner chooseOption = new Scanner(System.in);
         ContactList contactList = new ContactList();
         int userChose = 0;
-        while (userChose != 5){
+        while (userChose != 5) {
             printMenu();
             userChose = chooseOption.nextInt();
-            if (userChose == 5){
-                System.out.println("Good Bye");
-                break;
-            }
-            else if (userChose == 1){
-                System.out.println("Here is all Contacts: \n ");
-                contactList.listContacts();
-            }
-            else if (userChose == 2){
+            Contact contact = null;
+            try {
+                if (userChose == 5) {
+                    System.out.println("Good Bye");
+                    break;
+
+                } else if (userChose == 1) {
+                    System.out.println("Here is all Contacts: \n ");
+                    contactList.listContacts();
+
+                } else if (userChose == 2) {
+                    contactList.addContact(contact);
+                    System.out.println();
+
+
+
+                } else if (userChose == 3) {
+                    contactList.removeContact(contact);
+                    System.out.println();
+
+                }
+                else if (userChose == 4){
+                    contactList.updateContacts(contact);
+                    contactList.addContact(contact);
+                    System.out.println();
+                }
+
                 // adding contact menu
                 // enter name
                 // enter mobile...
-                Contact contact = new Contact(1, "aa", "aaa", "1341", "sadfafsd");
-                contactList.addContact(contact);
-                System.out.println();
+
+            }catch (Exception e){
+                System.out.println("Error Format : your input is wrong format try again");
             }
         }
 
